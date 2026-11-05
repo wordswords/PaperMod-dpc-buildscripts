@@ -3,9 +3,12 @@
 set -e
 set -x
 
-ln -sf ./default-post-template.md ../default-post-template.md
-ln -sf ./github-repo-sh ../github-repo.sh
-ln -sf ./new-post.zsh ../new-post.zsh
-ln -sf ./publish-post.zsh ../publish-post.zsh
-ln -sf ./test-blog.zsh ../test-blog.zsh
+PD=$(pwd)
+
+ln -sf ${PD}/default-post-template.md ../default-post-template.md
+ln -sf ${PD}/github-repo.sh ../github-repo.sh
+ln -sf ${PD}/new-post.zsh ../new-post.zsh
+ln -sf ${PD}/publish-post.zsh ../publish-post.zsh
+ln -sf ${PD}/test-blog.zsh ../test-blog.zsh
+
 
