@@ -13,4 +13,5 @@ git push origin main
 ./themes/PaperMod-dpc/scripts/fetch-git-hashes.sh
 git add ./static/
 git commit -m "Latest hash update" || echo ''
+sleep 600
 git push origin main
