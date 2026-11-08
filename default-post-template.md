@@ -1,6 +1,7 @@
 ---
 {{/* todays date (NOT automatically generated FILL IT IN */}}
-date: 2024-02-04T02:48:13+00:00
+date: {{/* DATE PLACEHOLDER */}}
+2024-02-04T02:48:13+00:00
 {{/* descriptive title that appears on the top of the page and in indexes */}}
 title:
 {{/* url is /$1/ where $1 is your post slug */}}

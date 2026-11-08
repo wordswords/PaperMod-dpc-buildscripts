@@ -15,7 +15,16 @@ rm -rf content/posts/${postslug}.md
 hugo new content content/posts/${postslug}.md
 rm content/posts/${postslug}.md
 mkdir -p content/posts/${postslug}
-cp ./default-post-template.md content/posts/${postslug}/index.md
+postdate=$(date '+%Y-%m-%dT%H:%M:%S%:z')
+awk -v postdate="${postdate}" '
+    /^[{][{]\/\* todays date / { next }
+    /^date: [{][{]\/\* DATE PLACEHOLDER \*\/}}$/ {
+        print "date: " postdate
+        getline # Skip the old example timestamp following the placeholder.
+        next
+    }
+    { print }
+' ./default-post-template.md > "content/posts/${postslug}/index.md"
 vim content/posts/${postslug}/index.md
 
 echo "Now put images in $(pwd)/content/posts/$1/ !"
