@@ -11,6 +11,6 @@ ln -sf ${PD}/new-post.zsh ../new-post.zsh
 ln -sf ${PD}/publish-post.zsh ../publish-post.zsh
 ln -sf ${PD}/test-blog.zsh ../test-blog.zsh
 ln -sf ${PD}/generate-lychee-report.sh ../generate-lychee-report.sh
-
+ln -sf ${PD}/generate-favicons.sh ../generated-favicons.sh
 
 
